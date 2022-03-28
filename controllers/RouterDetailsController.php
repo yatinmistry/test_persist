@@ -54,12 +54,8 @@ class RouterDetailsController extends Controller
             foreach ($data as $row){
                 $model = new RouterDetails();
                 $model->attributes = $row;
-//                print_r($model->attributes);
                 if ($model->save()) {
-//                    echo "Saved<br/>";
                 } else {
-//                    echo "failed<br/>";
-//                    print_r($model->errors);
                 }
             }
             Yii::$app->session->setFlash('success', "Data Imported Successfully");

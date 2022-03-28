@@ -87,12 +87,8 @@ class UploadForm extends Model
     }
 
     public function isDuplicateError($key) {
-//        echo "<pre>";
-//        print_r($this->validationErrors[$key]);
-//        exit;
         if(isset($this->validationErrors[$key])){
             $errors = json_encode($this->validationErrors[$key]);
-//            echo $errors;exit;
             if(false !== strpos($errors,"Duplicate")){
                 return true;
             }
